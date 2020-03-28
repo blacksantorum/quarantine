@@ -15,6 +15,9 @@
 		2534A92F242FA3A000AACFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2534A92D242FA3A000AACFC9 /* LaunchScreen.storyboard */; };
 		2534A93A242FA3A000AACFC9 /* QuarantineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534A939242FA3A000AACFC9 /* QuarantineTests.swift */; };
 		2534A945242FA3A000AACFC9 /* QuarantineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534A944242FA3A000AACFC9 /* QuarantineUITests.swift */; };
+		2534A953242FA41A00AACFC9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534A952242FA41A00AACFC9 /* LocationManager.swift */; };
+		2534A955242FA96100AACFC9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534A954242FA96100AACFC9 /* NetworkManager.swift */; };
+		2534A958242FA9B900AACFC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534A957242FA9B900AACFC9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		2534A940242FA3A000AACFC9 /* QuarantineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuarantineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2534A944242FA3A000AACFC9 /* QuarantineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuarantineUITests.swift; sourceTree = "<group>"; };
 		2534A946242FA3A000AACFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2534A952242FA41A00AACFC9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2534A954242FA96100AACFC9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2534A957242FA9B900AACFC9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		2534A921242FA39F00AACFC9 /* Quarantine */ = {
 			isa = PBXGroup;
 			children = (
+				2534A956242FA9A000AACFC9 /* Model */,
+				2534A952242FA41A00AACFC9 /* LocationManager.swift */,
+				2534A954242FA96100AACFC9 /* NetworkManager.swift */,
 				2534A922242FA39F00AACFC9 /* AppDelegate.swift */,
 				2534A924242FA39F00AACFC9 /* SceneDelegate.swift */,
 				2534A926242FA39F00AACFC9 /* ContentView.swift */,
@@ -134,6 +143,14 @@
 				2534A946242FA3A000AACFC9 /* Info.plist */,
 			);
 			path = QuarantineUITests;
+			sourceTree = "<group>";
+		};
+		2534A956242FA9A000AACFC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2534A957242FA9B900AACFC9 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2534A953242FA41A00AACFC9 /* LocationManager.swift in Sources */,
 				2534A923242FA39F00AACFC9 /* AppDelegate.swift in Sources */,
+				2534A958242FA9B900AACFC9 /* User.swift in Sources */,
+				2534A955242FA96100AACFC9 /* NetworkManager.swift in Sources */,
 				2534A925242FA39F00AACFC9 /* SceneDelegate.swift in Sources */,
 				2534A927242FA39F00AACFC9 /* ContentView.swift in Sources */,
 			);
