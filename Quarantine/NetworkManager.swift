@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FirebaseFirestore
 
 protocol NetworkManagerDelegate: AnyObject {
   func registeredUserActive(_ user: User)
@@ -15,6 +16,7 @@ protocol NetworkManagerDelegate: AnyObject {
 
 class NetworkManager: NSObject, LocationDelegate {
   weak var delegate: NetworkManagerDelegate?
+  var database = Firestore.firestore()
   
   init(delegate: NetworkManagerDelegate) {
     self.delegate = delegate

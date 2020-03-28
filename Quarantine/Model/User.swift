@@ -17,10 +17,12 @@ class User {
   }
   
   static let current = User(name: "Chris Tibbs",
+                            imageUrl: URL(string: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/56435185_10113548347774375_7281816076239765504_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=NdaGU9OybOcAX-fK2A5&_nc_ht=scontent-lga3-1.xx&oh=29bacf6d900167402f0badbe2b9fbf13&oe=5EA66C4F"),
                             dob: Date(),
                             pronoun: "He")
   
   var name: String
+  var isActive = false
   var imageUrl: URL?
   var dob: Date
   var pronoun: Pronoun
