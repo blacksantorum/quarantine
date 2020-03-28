@@ -22,7 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, NetworkManagerDelegate 
     networkManager = NetworkManager(delegate: self)
     locationManager = LocationManager(delegate: networkManager)
     
-    let contentView = ContentView()
+    guard let currentUser = User.current else {
+      return
+    }
+    let contentView = ContentView().environmentObject(currentUser)
 
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {

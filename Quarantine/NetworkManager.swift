@@ -34,6 +34,26 @@ class NetworkManager: NSObject, LocationDelegate {
   }
   
   private func registerActive(user: User) -> Void {
+    guard let currentLocation = user.currentLocation else {
+      print(("EQ-5: Trying to register a user as active without current location"))
+      assertionFailure()
+      return
+    }
+    
+    var ref: DocumentReference? = nil
+    ref = database.collection("users").addDocument(data: [
+      "name": user.name,
+      // TODO: send imageURL
+      "dob": user.dob.timeIntervalSince1970,
+      "pronoun": user.pronoun.rawValue,
+      "isActive": user.isActive,
+      "currentLocation": GeoPoint(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
+    ]) { err in
+        if let err = err {
+            print("EQ-6: Error registering current user: \(err)")
+        }
+    }
+    
     delegate?.registeredUserActive(user)
   }
 }

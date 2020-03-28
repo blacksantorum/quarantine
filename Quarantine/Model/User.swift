@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class User {
+class User: ObservableObject {
   enum Pronoun: String {
     case he = "He"
     case she = "She"
@@ -26,7 +26,7 @@ class User {
   var imageUrl: URL?
   var dob: Date
   var pronoun: Pronoun
-  var currentLocation: CLLocationCoordinate2D?
+  @Published var currentLocation: CLLocationCoordinate2D?
   
   init?(name: String,
         imageUrl: URL? = nil,
